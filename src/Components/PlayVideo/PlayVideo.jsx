@@ -11,8 +11,153 @@ import user_profile from '../../assets/user_profile.jpg'
 const PlayVideo = () => {
   return (
     <div className='play-video'>
-        <video src={video1}></video>
-
+        <video src={video1} controls autoPlay muted></video>
+        <h3>Best YouTube Channel to Learn Web Development</h3>
+        <div className='play-video-info'>
+            <p>1525 Views &bull; 3 days ago</p>
+            <div>
+                <span><img src={like}/>125</span>
+                <span><img src={dislike}/>125</span>
+                <span><img src={share}/>Share</span>
+                <span><img src={save}/>Save</span>
+            </div>
+        </div>
+        <hr/>
+        <div className='publisher'>
+            <img src={jack} alt="" />
+            <div>
+                <p>GreatStack</p>
+                <span>1M Subscribers</span>
+            </div>
+            <button>Subscribe</button>
+        </div>
+        <div className='vid.discription'>
+            <p>
+                Subscribe GreatStack to watch more tutorials on web development
+            </p>
+            <hr/>
+            <h4>130 Comments</h4>  
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className='comment'>
+                <img src={user_profile}/>
+                <div>
+                    <h3>Arion Nilolo <span>3 days ago</span></h3>
+                    <p> Amazing </p>
+                    <div className='comment-action'>
+                        <img src={like} alt="" />
+                        <span>255</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }
