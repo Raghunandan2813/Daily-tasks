@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './PlayVideo.css'
 import  video1 from '../../assets/video.mp4'
 import like from '../../assets/like.png'
@@ -7,16 +7,31 @@ import share from '../../assets/share.png'
 import save from '../../assets/save.png'
 import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
+import { API_KEY, value_converter } from '../../data'
+import moment from 'moment'
 
-const PlayVideo = () => {
+const PlayVideo = ({videoId}) => {
+
+const [apiData , setApiData] = useState(null)
+
+const fetchVideoData = async()=>{
+    //Fetching Videos Data
+    const videoDetails_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+    await fetch(videoDetails_url).then(response=>response.json()).then(data=> setApiData(data.items[0]))
+
+}
+useEffect(()=>{
+    fetchVideoData();
+
+},[])
   return (
     <div className='play-video'>
-        <video src={video1} controls autoPlay muted></video>
-        <h3>Best YouTube Channel to Learn Web Development</h3>
+<iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>{apiData?apiData.snippet.title: " Title Here"}</h3>
         <div className='play-video-info'>
-            <p>1525 Views &bull; 3 days ago</p>
+            <p>{value_converter(apiData?apiData.statistics.viewCount: "16K")} &bull;{moment(apiData.snippet.publishedAt).fromNow()}</p>
             <div>
-                <span><img src={like}/>125</span>
+                <span><img src={like}/>{value_converter(apiData?apiData.statistics.likeCount: "1K")}</span>
                 <span><img src={dislike}/>125</span>
                 <span><img src={share}/>Share</span>
                 <span><img src={save}/>Save</span>
