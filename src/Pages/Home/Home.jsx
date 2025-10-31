@@ -4,6 +4,9 @@ import Feed from '../../Components/Feed/feed';
 import Sidebar from "../../Components/Sidebar/Sidebar";
 
 const Home = ({sidebar}) => {
+
+c
+
   return (
     <>
       <Sidebar sidebar = {sidebar}/>
