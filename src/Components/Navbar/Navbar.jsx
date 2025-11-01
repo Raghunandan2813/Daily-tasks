@@ -7,8 +7,12 @@ import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Navbar = ({setSidebar}) => {
+
+  
+
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
